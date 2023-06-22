@@ -20,14 +20,14 @@ after_success:
   - docker push beuelvinc/multi-server
   - docker push beuelvinc/multi-worker
 
-deploy:
-  provider: elasticbeanstalk
-  region: "us-east-1"  # take from url
-  app: "docker" # same as in aws
-  env: "Docker-env" #same as in aws
-  bucket_name: "elasticbeanstalk-us-east-1-250932413033" # same as in aws
-  bucket_path: "docker" # changes after u deploy
-  on:
-    branch: main #main
-  access_key_id: $AWS_ACCESS_KEY
-  secret_access_key: $AWS_SECRET_KEY
+#deploy:
+#  provider: elasticbeanstalk
+#  region: "us-east-1"  # take from url
+#  app: "docker" # same as in aws
+#  env: "Docker-env" #same as in aws
+#  bucket_name: "elasticbeanstalk-us-east-1-250932413033" # same as in aws
+#  bucket_path: "docker" # changes after u deploy
+#  on:
+#    branch: main #main
+#  access_key_id: $AWS_ACCESS_KEY
+#  secret_access_key: $AWS_SECRET_KEY
